@@ -1,0 +1,157 @@
+*{
+    font-family: 'Raleway';
+}
+
+/*Header*/
+
+.headgrid{
+    display: grid;
+    background-color:#848484;
+    grid-template-columns: 41.5vw 1fr 8.5vw;
+    column-gap: 10px;
+    justify-items: center;
+    color: white;
+}
+
+.nombre{
+    object-fit: cover;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+    font-size: larger;
+}
+
+/*Side*/
+
+.side{
+    position: absolute;
+    width: 30%;
+    height: auto;
+    margin-top: 1vw;
+    margin-left: 2.5%;
+    background-color: #f7e0c1;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 2vw auto 3vw 1fr auto;
+    justify-content: center;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+
+}
+
+.image-profile{
+    width: 50%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: center;
+    border-radius: 10px;
+}
+
+.education{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.contact{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/*Educacion*/
+
+.cv{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(242, 241, 241);
+    display: grid;
+    grid-template-columns: 32.5vw 5vw 5vw 5vw 5vw 5vw 5vw 5vw 5vw 5vw 5vw 5vw 5vw 5vw;
+    grid-template-rows: 2vw  auto auto auto auto auto auto auto 3vw 3vw;
+}
+
+.aboutme{
+    grid-column-start: 3;
+    grid-column-end: 14;
+    grid-row-start: 2;
+    grid-row-end: 3;   
+}
+
+.experiencia{
+    grid-column-start: 3;
+    grid-column-end: 14;
+    grid-row-start: 3;
+    grid-row-end: 4;  
+}
+
+.exp1{
+    grid-column-start: 3;
+    grid-column-end: 12;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    margin-left: 1vw; 
+}
+
+.const{
+    width: 70%;
+    grid-column-start: 13;
+    grid-column-end: 14;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    
+}
+
+.exp2{
+    grid-column-start: 3;
+    grid-column-end: 12;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    margin-left: 1vw; 
+}
+
+.const2{
+    width: 70%;
+    grid-column-start: 13;
+    grid-column-end: 14;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    margin-top: 2%;
+    
+}
+
+.skills{
+    grid-column-start: 3;
+    grid-column-end: 14;
+    grid-row-start: 7;
+    margin-top: 2%;
+}
+
+.list1{
+    grid-column-start: 4;
+    grid-column-end: 8;
+    grid-row-start: 8;
+    grid-row-end: 9;
+}
+
+.list2{
+    grid-column-start: 9;
+    grid-column-end: 13;
+    grid-row-start: 8;
+    grid-row-end: 9;
+}
+
+/*Letras*/
+h3 h4{
+    font-size:larger;
+    font-weight: bold;
+}
