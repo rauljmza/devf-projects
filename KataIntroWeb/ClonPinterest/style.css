@@ -1,0 +1,258 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    margin: 0;
+    margin-top: 0.5vw;
+    padding: 0;
+}
+
+#navbar-pinterest{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+
+.izquierda{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    margin-left: 0.5vw;
+}
+
+.izquierda .logocont{
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    width: 40%;
+    height: 40%;
+    
+}
+
+.izquierda .logocont:hover{
+    background-color: #e5e5e5;
+}
+
+.izquierda .inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    height: 1.5rem;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 3rem;
+    text-decoration: none;
+    font-size: 1vw;
+}
+
+.izquierda .expcre{
+    margin: 1vw;
+    font-weight: bold;
+    font-size: 1vw;
+    color: black;
+    text-decoration: none;
+}
+
+
+#srchlogo{
+    width: 40%;
+}
+
+
+
+.buscador{
+    width: 67%;
+    height: 30px;
+    margin-left: 0.4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #e3e3e3;
+    padding: 0.1vw;
+}
+
+.buscador:hover{
+    background: #c9c9c9;
+}
+
+.buscador i {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.buscador input {
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    padding-right: 1rem;
+}
+.buscador input::placeholder {
+    color: #767676;
+    font-size: 1rem;
+  }
+/*______________________________________*/
+.derecha{
+    display: flex;
+    align-items: center;
+    margin-left: 1.5vw;
+}
+/*______________________________________*/
+.derecha .notcont{
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.noticon{
+    width: 50%;
+    height: 50%;
+    
+}
+
+.derecha .notcont:hover{
+    background-color: #e5e5e5;
+}
+/*______________________________________*/
+.derecha .comcont{
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comicon{
+    width: 50%;
+    height: 50%;
+    
+}
+
+.derecha .comcont:hover{
+    background-color: #e5e5e5;
+}
+/*______________________________________*/
+.derecha .usercont{
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.usericon{
+    width: 50%;
+    height: 50%;
+    
+}
+
+.derecha .usercont:hover{
+    background-color: #e5e5e5;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1vw;
+}
+
+.container{
+    columns: 6;
+    column-gap: 1.2vw;
+}
+
+.container .box{
+    margin-bottom: 10px;
+    break-inside: avoid;
+}
+
+.container .box img{
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.container .box:hover{
+    filter: grayscale(80%);
+    -webkit-filter: grayscale(80%);
+    transition: 0.5s ease-in-out;
+}
+
+.container .box span{
+    display: none;
+    position: absolute;
+    top: 1vw;
+    left: 9vw;
+}
+
+.container .box:hover span{
+    display: block;
+}
+
+.container .box span input[type="button"]{
+    background-color: red;
+    border-radius: 1vw;
+    box-shadow: 0 0 10px 2px #000;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 870px){
+	.container {
+		columns: 5;
+	}
+    .container .box span{
+        left: 11vw;
+    }
+}
+
+@media screen and (max-width: 710px){
+	.container {
+		columns: 4;
+	}
+    .container .box span{
+        left: 13vw;
+    }
+}
+
+@media screen and (max-width: 510px){
+	.container {
+		columns: 3;
+	}
+    .container .box span{
+        left: 18vw;
+    }
+}
+
+@media screen and (max-width: 310px){
+	.container {
+		columns: 2;
+	}
+    .container .box span{
+        top: 2vw;
+        left: 22.5vw;
+    }
+}
