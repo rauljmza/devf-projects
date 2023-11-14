@@ -259,53 +259,68 @@ function actualizarResultadosBusqueda(resultados) {
     }
 
     function actualizarListaGrupos() {
+        const listaGruposContainer = document.getElementById('lista-grupos-container');
         const listaGrupos = document.getElementById('lista-grupos');
         listaGrupos.innerHTML = '';
-
+    
         for (let i = 0; i < grupos.length; i++) {
             const grupo = grupos[i];
-
+    
             const li = document.createElement('li');
             li.textContent = `Semestre ${grupo.semestre}, Grupo ${grupo.letra}, Alumnos: ${grupo.alumnos.length}`;
-
-            //Agrega un botón para ver los alumnos del grupo
+    
+            // Agrega un botón para ver los alumnos del grupo
             const verAlumnosBtn = document.createElement('button');
             verAlumnosBtn.textContent = 'Ver Alumnos';
             verAlumnosBtn.addEventListener('click', () => verAlumnosEnGrupo(i));
             li.appendChild(verAlumnosBtn);
-
-
-            //Agrega un botón para ocultar los alumnos del grupo
+    
+            // Agrega un botón para ocultar los alumnos del grupo
             const ocultarAlumnosBtn = document.createElement('button');
             ocultarAlumnosBtn.textContent = 'Ocultar Alumnos';
             ocultarAlumnosBtn.addEventListener('click', () => ocultarAlumnosEnGrupo(i));
             li.appendChild(ocultarAlumnosBtn);
-
-
-            //Agrega un botón para obtener el promedio del grupo
+    
+            // Agrega un botón para obtener el promedio del grupo
             const promedioGrupoBtn = document.createElement('button');
             promedioGrupoBtn.textContent = 'Promedio del Grupo';
             promedioGrupoBtn.addEventListener('click', () => obtenerPromedioGrupo(i));
             li.appendChild(promedioGrupoBtn);
-
-
+    
             listaGrupos.appendChild(li);
         }
+    
+        // Agregar la lista de grupos al contenedor específico
+        listaGruposContainer.appendChild(listaGrupos);
     }
 
     function verAlumnosEnGrupo(grupoIndex) {
+        // Ocultar las listas de alumnos anteriores
+        ocultarListasAlumnos();
+    
         const grupo = grupos[grupoIndex];
-        const listaAlumnosGrupo = document.getElementById('lista-alumnos-grupo');
-        listaAlumnosGrupo.innerHTML = '';
-
+        const listaGruposContainer = document.getElementById('lista-grupos-container');
+        const listaAlumnosGrupo = document.createElement('ul');
+        listaAlumnosGrupo.id = 'lista-alumnos-grupo';
+        listaGruposContainer.appendChild(listaAlumnosGrupo);
+    
         for (let i = 0; i < grupo.alumnos.length; i++) {
             const alumno = grupo.alumnos[i];
             const promedioAlumno = calcularPromedioAlumno(alumno);
+    
             const li = document.createElement('li');
             li.textContent = `${alumno.nombre} ${alumno.apellidos} (Edad: ${alumno.edad}) | Promedio: ${promedioAlumno.toFixed(2)}`;
             listaAlumnosGrupo.appendChild(li);
         }
     }
+    
+    function ocultarListasAlumnos() {
+        const listaGruposContainer = document.getElementById('lista-grupos-container');
+        // Busca y elimina todas las listas de alumnos existentes
+        const listasAlumnos = listaGruposContainer.querySelectorAll('ul[id^="lista-alumnos-grupo"]');
+        listasAlumnos.forEach(lista => lista.remove());
+    }
+    
 
     function ocultarAlumnosEnGrupo(grupoIndex) {
         const listaAlumnosGrupo = document.getElementById('lista-alumnos-grupo');
@@ -329,12 +344,11 @@ function actualizarResultadosBusqueda(resultados) {
     }
 
 
-//Agrega un elemento para mostrar los alumnos del grupo seleccionado
+/*//Agrega un elemento para mostrar los alumnos del grupo seleccionado
 const listaAlumnosGrupo = document.createElement('ul');
 listaAlumnosGrupo.id = 'lista-alumnos-grupo';
-document.body.appendChild(listaAlumnosGrupo);
+document.body.appendChild(listaAlumnosGrupo);*/
 
-document.getElementById('inscribir-en-grupo-btn').addEventListener('click', inscribirAlumnoEnGrupo);
 
 function calcularPromedioAlumno(alumno) {
     let totalCalificaciones = 0;
