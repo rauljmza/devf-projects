@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Gestion de Alumnos</title>
+</head>
+<body>
+    <h1>Gestion de Alumnos</h1>
+
+    <!-- Formulario para dar de alta a un alumno -->
+    <div>
+        <h2>Alta de Alumnos</h2>
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="text" id="apellidos" placeholder="Apellidos">
+        <input type="number" id="edad" placeholder="Edad">
+        <button id="alta-btn">Dar de Alta</button>
+    </div>
+
+    <!-- Formulario para inscribir a un alumno en una materia -->
+    <div>
+        <h2>Inscribir a un Alumno en una Materia</h2>
+        <select id="alumnos-dropdown">
+            <option value="">Selecciona un Alumno</option>
+        </select>
+        <select id="materia-dropdown">
+            <option value="">Selecciona una Materia</option>
+            <option value="Espanol">Espanol</option>
+            <option value="Matematicas">Matematicas</option>
+            <option value="Quimica">Quimica</option>
+            <option value="Fisica">Fisica</option>
+            <option value="Programacion">Programacion</option>
+        </select>
+        <button id="inscribir-btn">Inscribir</button>
+    </div>
+    <div>
+        <h2>Calificación de Alumno en Materia</h2>
+        <select id="alumno-calificacion-dropdown">
+            <option value="">Selecciona un Alumno</option>
+        </select>
+        <select id="materia-calificacion-dropdown">
+            <option value="">Selecciona una Materia</option>
+            <option value="Espanol">Espanol</option>
+            <option value="Matematicas">Matematicas</option>
+            <option value="Quimica">Quimica</option>
+            <option value="Fisica">Fisica</option>
+            <option value="Programacion">Programacion</option>
+        </select>
+        <input type="number" id="calificacion-input" placeholder="Calificación">
+        <button id="asignar-calificacion-btn">Asignar Calificación</button>
+    </div>
+
+    <!-- Formulario para crear grupos -->
+    <div>
+        <h2>Crear Grupo</h2>
+        <select id="semestre-dropdown">
+            <option value="">Selecciona un Semestre</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <!-- Agrega más opciones para el semestre -->
+        </select>
+        <select id="letra-dropdown">
+            <option value="">Selecciona un Grupo</option>
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <!-- Agrega más opciones para la letra -->
+        </select>
+        <button id="crear-grupo-btn">Crear Grupo</button>
+    </div>
+    
+    <!-- Formulario para inscribir alumnos en grupos -->
+    <div>
+        <h2>Inscribir Alumno en Grupo</h2>
+        <select id="alumnos-dropdown-grupo">
+            <option value="">Selecciona un Alumno</option>
+        </select>
+        <select id="grupo-dropdown">
+            <option value="">Selecciona un Semestre y Grupo</option>
+        </select>
+        <button id="inscribir-en-grupo-btn">Inscribir en Grupo</button>
+    </div>
+
+
+    <!-- Formulario para buscar un alumno -->
+    <div>
+        <h2>Buscar Alumno</h2>
+        <input type="text" id="busqueda" placeholder="Nombre o Apellidos">
+        <button id="buscar-btn">Buscar</button>
+    </div>
+
+    <!-- Lista de Alumnos -->
+    <h2>Lista de Alumnos General</h2>
+    <ul id="lista-alumnos"></ul>
+
+    <!-- Resultados de la Busqueda -->
+    <h2>Resultados de Busqueda</h2>
+    <ul id="resultados-busqueda"></ul>
+
+    <!-- Listas por Materia -->
+    <h2>Listas por Materia</h2>
+    <div>
+        <button id="espanol-btn">Espanol</button>
+        <button id="matematicas-btn">Matematicas</button>
+        <button id="quimica-btn">Quimica</button>
+        <button id="fisica-btn">Fisica</button>
+        <button id="programacion-btn">Programacion</button>
+    </div>
+
+    <div>
+        <ul id="lista-espanol"></ul>
+        <ul id="lista-matematicas"></ul>
+        <ul id="lista-quimica"></ul>
+        <ul id="lista-fisica"></ul>
+        <ul id="lista-programacion"></ul>
+    </div>
+
+    <!-- Botones para ordenar la lista de alumnos -->
+    <h2>Ordenar Alumnos</h2>
+    <button id="ordenar-asc-btn">Ordenar Ascendente</button>
+    <button id="ordenar-desc-btn">Ordenar Descendente</button>
+
+    <!-- Lista de Grupos -->
+    <h2>Lista de Grupos</h2>
+    <ul id="lista-grupos"></ul>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
+

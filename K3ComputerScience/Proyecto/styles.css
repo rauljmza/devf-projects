@@ -1,0 +1,118 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+#resultados-busqueda {
+    margin-top: 10px;
+}
+
+#lista-alumnos,
+#lista-alumnos-grupo,
+#lista-grupos,
+#resultados-busqueda,
+#lista-espanol,
+#lista-matematicas,
+#lista-quimica,
+#lista-fisica,
+#lista-programacion {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#lista-alumnos span,
+#lista-alumnos-grupo span,
+#lista-grupos span,
+#resultados-busqueda span,
+#lista-espanol span,
+#lista-matematicas span,
+#lista-quimica span,
+#lista-fisica span,
+#lista-programacion span {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+#lista-alumnos button,
+#lista-alumnos-grupo button,
+#lista-grupos button {
+    margin-top: 10px;
+}
+
+#lista-alumnos-grupo,
+#lista-grupos,
+#lista-espanol,
+#lista-matematicas,
+#lista-quimica,
+#lista-fisica,
+#lista-programacion {
+    display: none; /* Inicialmente oculto */
+}
+
+/* Estilos específicos para los botones de acción en la lista de grupos */
+#lista-grupos button {
+    background-color: #27ae60;
+}
+
+#lista-grupos button:hover {
+    background-color: #219d54;
+}
+
+/* Estilos específicos para la lista de resultados de búsqueda */
+#resultados-busqueda {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Estilos específicos para la barra de desplazamiento en la lista de resultados de búsqueda */
+#resultados-busqueda::-webkit-scrollbar {
+    width: 8px;
+}
+
+#resultados-busqueda::-webkit-scrollbar-thumb {
+    background-color: #3498db;
+}
+
+#resultados-busqueda::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
+}
